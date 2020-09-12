@@ -17,6 +17,7 @@ package com.company;
 // (hint: listiterator.remove()
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Main {
@@ -84,7 +85,11 @@ public class Main {
 
         //Interaction with playlist
 
+
+
         boolean quit = false;
+        ListIterator<Song> listIterator = playlist.getList().listIterator();
+        String direction ="next";
         while(!quit){
             int action = getAction();
             switch(action){
@@ -92,10 +97,31 @@ public class Main {
                     quit = true;
                     break;
                 case 1: //play next track;
+                    if(listIterator.hasNext()){
+                        if(direction == "previous"){
+                            direction = "next";
+                            listIterator.next();
+                        }
+                        System.out.println("Song playing:"+listIterator.next().getTitle());
+                    }else{
+                        System.out.println("You got end of playlist.");
+                    }
                     break;
                 case 2: //play previous track;
+                    if(listIterator.hasPrevious()){
+                        if(direction == "next"){
+                            direction = "previous";
+                            listIterator.previous();
+                        }
+                        System.out.println("Song playing:"+listIterator.previous().getTitle());
+                    }else{
+                        System.out.println("You got begin of playlist.");
+                    }
                     break;
                 case 3: //Replay current track;
+                    break;
+                case 4: //Replay current track;
+                    printPlaylist(playlist);
                     break;
             }
 
@@ -123,10 +149,13 @@ public class Main {
     }
 
     private static int getAction(){
-        System.out.println("0 - quit\n"+
+        System.out.println("\n"+
+                "Make a choice:\n"+
+                "0 - quit\n"+
                 "1 - play next track\n"+
                 "2 - play previous track\n"+
-                "3 - replay current track");
+                "3 - replay current track\n"+
+                "4 - print playlist");
         int action = scanner.nextInt();
         scanner.nextLine();
         return action;

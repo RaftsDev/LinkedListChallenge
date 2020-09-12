@@ -119,6 +119,13 @@ public class Main {
                     }
                     break;
                 case 3: //Replay current track;
+                    if(direction == "next"){//if user went forward direction through playlist
+                        listIterator.previous();
+                        System.out.println("Song replaying:"+listIterator.next().getTitle());
+                    }else{//if user went backward direction through playlist
+                        listIterator.next();
+                        System.out.println("Song replaying:"+listIterator.previous().getTitle());
+                    }
                     break;
                 case 4: //Replay current track;
                     printPlaylist(playlist);
@@ -160,5 +167,4 @@ public class Main {
         scanner.nextLine();
         return action;
     }
-
 }

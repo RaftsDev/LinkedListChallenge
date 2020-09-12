@@ -11,6 +11,10 @@ public class Playlist {
         this.list = new LinkedList<Song>();
     }
 
+    public LinkedList<Song> getList() {
+        return list;
+    }
+
     public void addSong(Album album, String songName){
         Song song = album.findSong(songName);
         if(song != null){

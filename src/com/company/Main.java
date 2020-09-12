@@ -52,13 +52,21 @@ public class Main {
         Fleetwood.addSong(song6);
 
         Zeppelin.addSong(song7);
+
+        //print songs
+
+        printSongs(Metallica);
+        printSongs(Nightwish);
+        printSongs(Fleetwood);
+        printSongs(Zeppelin);
     }
 
     public static void printSongs(Album album){
         ArrayList<Song> songs = album.getSongs();
-        System.out.println("Album:"+album.getName());
+        System.out.println("-");
+        System.out.println("Album: "+album.getName());
         for(int i=0; i< songs.size(); i++){
-            System.out.println(i+": "+songs.get(i).getTitle()+" Duration:"+songs.get(i).getDuration());
+            System.out.println(i+": "+songs.get(i).getTitle()+" - Duration: "+songs.get(i).getDuration());
         }
     }
 }

@@ -67,11 +67,15 @@ public class Main {
         //Add songs to playlist
 
         playlist.addSong(Metallica,"Nothing else matters");
+        playlist.addSong(Metallica,"Enter sandman");
+        playlist.addSong(Nightwish,"Ghost river");
+        playlist.addSong(Nightwish,"Song of myself");
+        playlist.addSong(Fleetwood,"Chain");
 
         //Validation
         playlist.addSong(Metallica,"Nothing else matter");
 
-
+        //print
 
 
     }

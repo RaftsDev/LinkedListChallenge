@@ -77,6 +77,8 @@ public class Main {
 
         //print songs from playlist
 
+        printPlaylist(playlist);
+
 
 
 
@@ -88,6 +90,16 @@ public class Main {
         System.out.println("Album: "+album.getName());
         for(int i=0; i< songs.size(); i++){
             System.out.println(i+": "+songs.get(i).getTitle()+" - Duration: "+songs.get(i).getDuration());
+        }
+    }
+
+    public static void printPlaylist(Playlist playlist){
+        System.out.println("\n"+
+                "Playlist: ");
+        Song currentSong;
+        for(int i = 0; i<playlist.getList().size(); i++){
+            currentSong = playlist.getList().get(i);
+            System.out.println(i+": "+currentSong.getTitle());
         }
     }
 

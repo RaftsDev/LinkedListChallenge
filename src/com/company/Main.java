@@ -17,8 +17,11 @@ package com.company;
 // (hint: listiterator.remove()
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
+
+    private static  Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
@@ -79,6 +82,25 @@ public class Main {
 
         printPlaylist(playlist);
 
+        //Interaction with playlist
+
+        boolean quit = false;
+        while(!quit){
+            int action = getAction();
+            switch(action){
+                case 0: //quit
+                    quit = true;
+                    break;
+                case 1: //play next track;
+                    break;
+                case 2: //play previous track;
+                    break;
+                case 3: //Replay current track;
+                    break;
+            }
+
+        }
+
     }
 
     public static void printAlbum(Album album){
@@ -98,6 +120,16 @@ public class Main {
             currentSong = playlist.getList().get(i);
             System.out.println(i+": "+currentSong.getTitle());
         }
+    }
+
+    private static int getAction(){
+        System.out.println("0 - quit\n"+
+                "1 - play next track\n"+
+                "2 - play previous track\n"+
+                "3 - replay current track");
+        int action = scanner.nextInt();
+        scanner.nextLine();
+        return action;
     }
 
 }

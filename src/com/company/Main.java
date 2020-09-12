@@ -64,6 +64,15 @@ public class Main {
 
         Playlist playlist = new Playlist("Rock playlist");
 
+        //Add songs to playlist
+
+        playlist.addSong(Metallica,"Nothing else matters");
+
+        //Validation
+        playlist.addSong(Metallica,"Nothing else matter");
+
+
+
 
     }
 

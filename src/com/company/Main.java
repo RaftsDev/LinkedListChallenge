@@ -79,15 +79,12 @@ public class Main {
 
         printPlaylist(playlist);
 
-
-
-
     }
 
     public static void printAlbum(Album album){
         ArrayList<Song> songs = album.getSongs();
-        System.out.println("-");
-        System.out.println("Album: "+album.getName());
+        System.out.println("\n"+
+                "Album: "+album.getName());
         for(int i=0; i< songs.size(); i++){
             System.out.println(i+": "+songs.get(i).getTitle()+" - Duration: "+songs.get(i).getDuration());
         }

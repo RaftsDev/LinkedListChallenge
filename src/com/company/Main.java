@@ -16,6 +16,8 @@ package com.company;
 // As an optional extra, provide an option to remove the current song from the playlist
 // (hint: listiterator.remove()
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -50,5 +52,13 @@ public class Main {
         Fleetwood.addSong(song6);
 
         Zeppelin.addSong(song7);
+    }
+
+    public static void printSongs(Album album){
+        ArrayList<Song> songs = album.getSongs();
+        System.out.println("Album:"+album.getName());
+        for(int i=0; i< songs.size(); i++){
+            System.out.println(i+": "+songs.get(i).getTitle()+" Duration:"+songs.get(i).getDuration());
+        }
     }
 }

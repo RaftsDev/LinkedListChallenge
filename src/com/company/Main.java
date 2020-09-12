@@ -55,10 +55,10 @@ public class Main {
 
         //print songs
 
-        printSongs(Metallica);
-        printSongs(Nightwish);
-        printSongs(Fleetwood);
-        printSongs(Zeppelin);
+        printAlbum(Metallica);
+        printAlbum(Nightwish);
+        printAlbum(Fleetwood);
+        printAlbum(Zeppelin);
 
         //Create playlist
 
@@ -75,12 +75,14 @@ public class Main {
         //Validation
         playlist.addSong(Metallica,"Nothing else matter");
 
-        //print
+        //print songs from playlist
+
+
 
 
     }
 
-    public static void printSongs(Album album){
+    public static void printAlbum(Album album){
         ArrayList<Song> songs = album.getSongs();
         System.out.println("-");
         System.out.println("Album: "+album.getName());
@@ -88,4 +90,5 @@ public class Main {
             System.out.println(i+": "+songs.get(i).getTitle()+" - Duration: "+songs.get(i).getDuration());
         }
     }
+
 }

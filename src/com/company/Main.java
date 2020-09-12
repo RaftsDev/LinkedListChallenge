@@ -48,6 +48,7 @@ public class Main {
         Nightwish.addSong(song5);
 
         Fleetwood.addSong(song6);
+
         Zeppelin.addSong(song7);
     }
 }

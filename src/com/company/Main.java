@@ -29,13 +29,25 @@ public class Main {
         Song song5 = new Song("Ever dream","5:10");
 
         Song song6 = new Song("Chain","5:35");
+        Song song7 = new Song("When The Levee Breaks", "7:10");
 
         //Albums
 
         Album Metallica = new Album("Metallica");
         Album Nightwish = new Album("Nightwish");
         Album Fleetwood = new Album("Fleetwood Mac");
+        Album Zeppelin = new Album("Led Zeppelin");
 
+        //Add songs to album
 
+        Metallica.addSong(song1);
+        Metallica.addSong(song2);
+
+        Nightwish.addSong(song3);
+        Nightwish.addSong(song4);
+        Nightwish.addSong(song5);
+
+        Fleetwood.addSong(song6);
+        Zeppelin.addSong(song7);
     }
 }

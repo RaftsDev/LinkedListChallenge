@@ -59,6 +59,12 @@ public class Main {
         printSongs(Nightwish);
         printSongs(Fleetwood);
         printSongs(Zeppelin);
+
+        //Create playlist
+
+        Playlist playlist = new Playlist("Rock playlist");
+
+
     }
 
     public static void printSongs(Album album){

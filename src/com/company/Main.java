@@ -19,6 +19,23 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        //Create a songs
+        Song song1 = new Song("Nothing else matters","5:10");
+        Song song2 = new Song("Enter sandman","4:30");
+
+        Song song3 = new Song("Ghost river","5:15");
+        Song song4 = new Song("Song of myself","7:35");
+        Song song5 = new Song("Ever dream","5:10");
+
+        Song song6 = new Song("Chain","5:35");
+
+        //Albums
+
+        Album Metallica = new Album("Metallica");
+        Album Nightwish = new Album("Nightwish");
+        Album Fleetwood = new Album("Fleetwood Mac");
+
+
     }
 }

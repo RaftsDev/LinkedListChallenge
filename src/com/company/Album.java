@@ -18,4 +18,8 @@ public class Album {
     public ArrayList<Song> getSongs() {
         return songs;
     }
+
+    public void addSong(Song song){
+        songs.add(song);
+    }
 }
